@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://ws.hrp.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.hrp.com/">
+
+<xs:element name="configureApp" type="tns:configureApp" />
+
+<xs:element name="configureAppResponse" type="tns:configureAppResponse" />
+
+<xs:element name="generateKey" type="tns:generateKey" />
+
+<xs:element name="generateKeyResponse" type="tns:generateKeyResponse" />
+
+<xs:element name="getKeyForUser" type="tns:getKeyForUser" />
+
+<xs:element name="getKeyForUserResponse" type="tns:getKeyForUserResponse" />
+
+<xs:element name="invalidateKey" type="tns:invalidateKey" />
+
+<xs:element name="invalidateKeyResponse" type="tns:invalidateKeyResponse" />
+
+<xs:element name="oneTimeLogin" type="tns:oneTimeLogin" />
+
+<xs:element name="oneTimeLoginResponse" type="tns:oneTimeLoginResponse" />
+
+<xs:complexType name="generateKey">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+<xs:element name="imei" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateKeyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="invalidateKey">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+<xs:element name="imei" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="invalidateKeyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configureApp">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+<xs:element name="imei" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configureAppResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKeyForUser">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+<xs:element name="imei" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKeyForUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="oneTimeLogin">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+<xs:element name="imei" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="oneTimeLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
